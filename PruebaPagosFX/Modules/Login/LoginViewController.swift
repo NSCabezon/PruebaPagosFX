@@ -24,10 +24,17 @@ class LoginViewController: UIViewController, LoginViewProtocol {
 		   }
 	   }
 	@IBOutlet weak var passwordTextfield: UITextField!
+	@IBOutlet weak var loginButton: UIButton! {
+		didSet {
+			loginButton.setTitle(localizedString("log_in"), for: .normal)
+		}
+	}
 	@IBOutlet weak var localEnvSwitchContentView: UIView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		title = localizedString("login_nav_title")
 		
 		#if DEBUG
 		localEnvSwitchContentView.isHidden = false
@@ -39,12 +46,18 @@ class LoginViewController: UIViewController, LoginViewProtocol {
 	}
 	
 	@IBAction func loginAction(_ sender: Any) {
-		guard let user = userTextfield.text else {
-			presentErrorAlert(message: localizedString("user_mandatory"), viewController: self)
+		guard let user = userTextfield.text,
+			user != "" else {
+				presentErrorAlert(message: localizedString("user_mandatory"), acceptCompletion: { _, _ in
+					self.userTextfield.becomeFirstResponder()
+				})
 			return
 		}
-		guard let password = passwordTextfield.text else {
-			presentErrorAlert(message: localizedString("password_mandatory"), viewController: self)
+		guard let password = passwordTextfield.text,
+			password != "" else {
+			presentErrorAlert(message: localizedString("password_mandatory"), acceptCompletion: { _, _ in
+				self.passwordTextfield.becomeFirstResponder()
+			})
 			return
 		}
 		view.endEditing(true)
@@ -53,7 +66,8 @@ class LoginViewController: UIViewController, LoginViewProtocol {
 	}
 	
 	func loginDidFailed() {
-		presentErrorAlert(message: localizedString("login_failed"), viewController: self)
+		hideGlobalSpinnerView()
+		presentErrorAlert(message: localizedString("login_failed"))
 	}
 	
 	@IBAction func localEnvValueChanged(_ sender: UISwitch) {

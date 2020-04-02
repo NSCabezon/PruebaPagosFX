@@ -28,7 +28,7 @@ class LoginPresenter: LoginPresenterProtocol {
 	
 	func loginOk() {
 		view?.hideGlobalSpinnerView()
-		// TODO: navigate to GP
+		router.goToGlobalPosition()
 	}
 	
 	func loginDidFailed() {

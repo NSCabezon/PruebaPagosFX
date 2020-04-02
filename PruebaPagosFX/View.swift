@@ -4,13 +4,13 @@ import KRProgressHUD
 typealias AlertCompletion = (_ action: UIAlertAction, _ alert: UIAlertController) -> Void
 
 protocol AlertPresentable {
-    func presentErrorAlert(message: String, acceptCompletion: AlertCompletion?, viewController: UIViewController)
-    func presentAlert(title: String?, message: String?, acceptTitle: String?, acceptCompletion: AlertCompletion?, cancelTitle: String?, cancelCompletion: AlertCompletion?, style: UIAlertAction.Style?, viewController: UIViewController)
+    func presentErrorAlert(message: String, acceptCompletion: AlertCompletion?)
+    func presentAlert(title: String?, message: String?, acceptTitle: String?, acceptCompletion: AlertCompletion?, cancelTitle: String?, cancelCompletion: AlertCompletion?, style: UIAlertAction.Style?)
 }
 
-extension AlertPresentable {
-    func presentErrorAlert(message: String, acceptCompletion: AlertCompletion? = nil, viewController: UIViewController) {
-        _ = presentAlert(message: message, acceptCompletion: acceptCompletion, viewController: viewController)
+extension AlertPresentable where Self: UIViewController {
+    func presentErrorAlert(message: String, acceptCompletion: AlertCompletion? = nil) {
+        _ = presentAlert(message: message, acceptCompletion: acceptCompletion)
     }
     
     func presentAlert(title: String? = nil,
@@ -19,25 +19,21 @@ extension AlertPresentable {
                       acceptCompletion: AlertCompletion? = nil,
                       cancelTitle: String? = nil,
                       cancelCompletion: AlertCompletion? = nil,
-                      style: UIAlertAction.Style? = nil,
-                      viewController: UIViewController) {
-		_ = AlertManager.showAlert(title: title,
-								   message: message,
-								   acceptTitle: acceptTitle,
-								   acceptCompletion: acceptCompletion,
-								   cancelTitle: cancelTitle,
-								   cancelCompletion: cancelCompletion,
-								   isDestructive: (style == .destructive),
-								   viewController: viewController)
+					  style: UIAlertAction.Style? = nil) {
+		_ = showAlert(title: title,
+					  message: message,
+					  acceptTitle: acceptTitle,
+					  acceptCompletion: acceptCompletion,
+					  cancelTitle: cancelTitle,
+					  cancelCompletion: cancelCompletion,
+					  isDestructive: (style == .destructive))
 	}
-}
-
-public class AlertManager: NSObject {
-    class func showAlert(errorString: String?, completion: AlertCompletion?, viewController: UIViewController) {
-        showAlert(title: nil, message: errorString, acceptTitle: nil, acceptCompletion: completion, cancelTitle: nil, cancelCompletion: nil, viewController: viewController)
+	
+    func showAlert(errorString: String?, completion: AlertCompletion?) {
+        showAlert(title: nil, message: errorString, acceptTitle: nil, acceptCompletion: completion, cancelTitle: nil, cancelCompletion: nil)
     }
     
-    class func showAlert(title: String? = "", message: String?, acceptTitle: String?, acceptCompletion: AlertCompletion? = nil, cancelTitle: String? = nil, cancelCompletion: AlertCompletion? = nil, isDestructive: Bool = false, viewController: UIViewController) {
+    func showAlert(title: String? = "", message: String?, acceptTitle: String?, acceptCompletion: AlertCompletion? = nil, cancelTitle: String? = nil, cancelCompletion: AlertCompletion? = nil, isDestructive: Bool = false) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -59,7 +55,7 @@ public class AlertManager: NSObject {
         
         alert.addAction(okAction)
         
-        viewController.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
 

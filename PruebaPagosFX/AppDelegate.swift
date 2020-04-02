@@ -32,6 +32,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
 		IQKeyboardManager.shared.shouldResignOnTouchOutside = true
 	}
-	
 }
-

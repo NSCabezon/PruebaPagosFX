@@ -1,5 +1,5 @@
 //
-//  AuthProtocol.swift
+//  AuthRepository.swift
 //  PruebaPagosFX
 //
 //  Created by Ivan Cabezon on 02/04/2020.

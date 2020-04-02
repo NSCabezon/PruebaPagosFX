@@ -7,8 +7,15 @@
 */
 
 // Login
+"login_nav_title" = "Login";
 "user_hint" = "Usuario:";
 "pass_hint" = "Contraseña:";
+"log_in" = "Log in";
 "user_mandatory" = "El usuario es obligatorio, por favor introduce un usuario";
 "password_mandatory" = "La contraseña es obligatoria, por favor introduce una contraseña";
 "login_failed" = "Login incorrecto, verifica los campos e intentalo de nuevo.";
+
+// Global position
+"global_position" = "Global position";
+"account_section_title" = "Cuentas";
+"card_section_title" = "Tarjetas";

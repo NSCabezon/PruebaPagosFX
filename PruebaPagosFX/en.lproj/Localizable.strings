@@ -7,8 +7,15 @@
 */
 
 // Login
+"login_nav_title" = "Login";
 "user_hint" = "User:";
 "pass_hint" = "Password:";
+"log_in" = "Log in";
 "user_mandatory" = "User is mandatory, please enter a valid user";
 "password_mandatory" = "Password is mandatory, please enter a valid password";
 "login_failed" = "Login failed, please try again.";
+
+// Global position
+"global_position" = "Global position";
+"account_section_title" = "Accounts";
+"card_section_title" = "Cards";

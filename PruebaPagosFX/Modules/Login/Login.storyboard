@@ -101,6 +101,7 @@
                     </view>
                     <connections>
                         <outlet property="localEnvSwitchContentView" destination="U7J-Ce-JIs" id="1BH-io-XIo"/>
+                        <outlet property="loginButton" destination="plM-wD-LC5" id="j4I-7w-wWk"/>
                         <outlet property="passwordLabel" destination="Fgw-4O-HEZ" id="1VV-ZC-06I"/>
                         <outlet property="passwordTextfield" destination="oEk-PR-sHc" id="k3t-tV-eyt"/>
                         <outlet property="userLabel" destination="Iqk-Z0-5Vw" id="pAE-rz-UfI"/>

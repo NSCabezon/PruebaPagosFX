@@ -36,4 +36,3 @@ enum Environment: EnvironmentInfo {
 		return .dev
 	}
 }
-

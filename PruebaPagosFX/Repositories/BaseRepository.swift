@@ -13,7 +13,7 @@ import Alamofire
 class BaseRepository: NSObject {
 	let manager: RequestManager
 	
-	internal init(manager: RequestManager = RequestManager(Environment.dev, mockingProtocol: MockingURLProtocol.self)) {
+	internal init(manager: RequestManager = RequestManager(SessionData.shared.environment, mockingProtocol: MockingURLProtocol.self)) {
 		self.manager = manager
 	}
 	

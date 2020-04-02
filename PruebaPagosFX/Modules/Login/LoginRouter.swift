@@ -3,7 +3,7 @@ import Foundation
 // MARK: - Wireframe
 
 protocol LoginWireframeProtocol: class {
-	
+	func goToGlobalPosition()
 }
 
 class LoginRouter: LoginWireframeProtocol {
@@ -21,5 +21,10 @@ class LoginRouter: LoginWireframeProtocol {
 		router.viewController = view
 
 		return view
+	}
+	
+	func goToGlobalPosition() {
+		let globalPositionVC = GlobalPositionRouter.createModule()
+		viewController?.navigationController?.pushViewController(globalPositionVC, animated: true)
 	}
 }
