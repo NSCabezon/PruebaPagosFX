@@ -14,6 +14,7 @@ class LoginPresenterMock: LoginPresenterProtocol {
 	var loginCalled = false
 	var loginOkCalled = false
 	var loginDidFailedCalled = false
+	var switchValueChangedCalled = false
 	
 	func login(with user: String, and password: String) {
 		loginCalled = true
@@ -25,5 +26,9 @@ class LoginPresenterMock: LoginPresenterProtocol {
 	
 	func loginDidFailed() {
 		loginDidFailedCalled = true
+	}
+	
+	func switchValueChanged(isOn: Bool) {
+		switchValueChangedCalled = true
 	}
 }
