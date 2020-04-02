@@ -19,3 +19,7 @@
 "global_position" = "Global position";
 "account_section_title" = "Cuentas";
 "card_section_title" = "Tarjetas";
+"account_title" = "Cuentas";
+"card_title" = "Tarjetas";
+"alias_l" = "Alias";
+"save_l" = "Guardar alias";

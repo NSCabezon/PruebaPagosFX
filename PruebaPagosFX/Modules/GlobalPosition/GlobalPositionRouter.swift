@@ -3,7 +3,7 @@ import Foundation
 // MARK: - Wireframe
 
 protocol GlobalPositionWireframeProtocol: class {
-	
+	func goToDetail(for product: Product)
 }
 
 class GlobalPositionRouter: GlobalPositionWireframeProtocol {
@@ -22,5 +22,12 @@ class GlobalPositionRouter: GlobalPositionWireframeProtocol {
 		router.viewController = view
 		
 		return view
+	}
+	
+	func goToDetail(for product: Product) {
+		guard let viewController = viewController else { return }
+		// TODO: when detail is different make a switch
+		let productDetail = ProductDetailRouter.createModule(product: product, refreshDelegate: viewController)
+		viewController.navigationController?.pushViewController(productDetail, animated: true)
 	}
 }

@@ -8,7 +8,7 @@ protocol GlobalPositionViewProtocol: class {
 	func didFailToGetGP()
 }
 
-class GlobalPositionViewController: UIViewController, GlobalPositionViewProtocol, View {
+class GlobalPositionViewController: UIViewController, GlobalPositionViewProtocol, View, GlobalPositionRefreshProtocol {
 	
 	var presenter: GlobalPositionPresenterProtocol?
 	var globalPosition: GlobalPosition?
@@ -74,5 +74,15 @@ extension GlobalPositionViewController: UITableViewDelegate, UITableViewDataSour
 		assert(false)
 		return UITableViewCell()
 	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		presenter?.goToProductDetail(at: indexPath)
+	}
+}
 
+extension GlobalPositionViewController {
+	func refreshGlobalPosition() {
+		tableView.reloadData()
+	}
 }

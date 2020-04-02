@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GlobalPosition: Codable {
+class GlobalPosition: Codable {
     let name: String
     let accounts: [Account]
     let cards: [Card]

@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct Account: Codable, Product {
-    let iban, alias: String
+class Account: Codable, Product {
+	let iban: String
+	var alias: String?
     let balance: Balance
 	
 	var id: String {

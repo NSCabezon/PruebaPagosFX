@@ -6,6 +6,7 @@ protocol GlobalPositionPresenterProtocol: class {
 	func getGlobalPosition()
 	func didGetGP(globalPosition: GlobalPosition)
 	func didFailToGetGP()
+	func goToProductDetail(at indexPath: IndexPath)
 }
 
 class GlobalPositionPresenter: GlobalPositionPresenterProtocol {
@@ -33,5 +34,11 @@ class GlobalPositionPresenter: GlobalPositionPresenterProtocol {
 	func didFailToGetGP() {
 		// TODO: ask product what we should do, go back to login?
 		view?.didFailToGetGP()
+	}
+	
+	func goToProductDetail(at indexPath: IndexPath) {
+		if let product = globalPosition?.globalPositionProducts[indexPath.section][indexPath.row] {
+			router.goToDetail(for: product)
+		}
 	}
 }

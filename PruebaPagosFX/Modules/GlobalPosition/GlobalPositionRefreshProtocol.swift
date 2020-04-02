@@ -1,5 +1,5 @@
 //
-//  Product.swift
+//  GlobalPositionRefreshProtocol.swift
 //  PruebaPagosFX
 //
 //  Created by Ivan Cabezon on 02/04/2020.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-protocol Product {
-	var id: String { get }
-	var alias: String? { get }
-	var balance: Balance { get }
+protocol GlobalPositionRefreshProtocol: class {
+	func refreshGlobalPosition()
 }
