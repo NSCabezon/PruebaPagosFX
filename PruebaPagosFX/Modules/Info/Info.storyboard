@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="bvt-cg-y7d">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A71-oR-m7Q" customClass="InfoViewController" customModule="PruebaPagosFX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hhD-nP-PDI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-Hy-Ski">
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrZ-jG-V2g">
+                                <rect key="frame" x="164.5" y="131" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToURLAction:" destination="A71-oR-m7Q" eventType="touchUpInside" id="Lq5-Cq-XK0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WqX-Hy-Ski" firstAttribute="top" secondItem="ECN-iQ-uTS" secondAttribute="top" constant="80" id="4u4-RV-HtN"/>
+                            <constraint firstItem="yrZ-jG-V2g" firstAttribute="centerX" secondItem="hhD-nP-PDI" secondAttribute="centerX" id="6Dm-AF-fWq"/>
+                            <constraint firstItem="WqX-Hy-Ski" firstAttribute="leading" secondItem="ECN-iQ-uTS" secondAttribute="leading" constant="16" id="epO-Pa-TZh"/>
+                            <constraint firstItem="yrZ-jG-V2g" firstAttribute="top" secondItem="WqX-Hy-Ski" secondAttribute="bottom" constant="30" id="lCj-r9-vP0"/>
+                            <constraint firstItem="ECN-iQ-uTS" firstAttribute="trailing" secondItem="WqX-Hy-Ski" secondAttribute="trailing" constant="16" id="th7-4a-wHS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ECN-iQ-uTS"/>
+                    </view>
+                    <connections>
+                        <outlet property="repoURLLabel" destination="WqX-Hy-Ski" id="eZb-0s-W51"/>
+                        <outlet property="takeMeThereButton" destination="yrZ-jG-V2g" id="H6a-L3-CAx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzd-dg-I5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="63"/>
+        </scene>
+    </scenes>
+</document>

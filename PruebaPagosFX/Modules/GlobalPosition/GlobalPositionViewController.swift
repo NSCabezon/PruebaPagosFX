@@ -24,6 +24,9 @@ class GlobalPositionViewController: UIViewController, GlobalPositionViewProtocol
 	
 	func configureUI() {
 		tableView.registerNib(GPCellTableViewCell.self)
+		let infoButton = UIButton(type: .infoLight)
+		infoButton.addTarget(self, action: #selector(openInfoScreenAction), for: .touchUpInside)
+		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
 	}
 	
 	func didGetGP(globalPosition: GlobalPosition) {
@@ -35,6 +38,10 @@ class GlobalPositionViewController: UIViewController, GlobalPositionViewProtocol
 	
 	func didFailToGetGP() {
 		hideGlobalSpinnerView()
+	}
+	
+	@objc func openInfoScreenAction() {
+		presenter?.goToInfoScreen()
 	}
 	
 	class func initFromStoryboard() -> GlobalPositionViewController {

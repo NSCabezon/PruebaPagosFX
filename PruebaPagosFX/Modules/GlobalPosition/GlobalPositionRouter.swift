@@ -4,6 +4,7 @@ import Foundation
 
 protocol GlobalPositionWireframeProtocol: class {
 	func goToDetail(for product: Product)
+	func goToInfoScreen()
 }
 
 class GlobalPositionRouter: GlobalPositionWireframeProtocol {
@@ -29,5 +30,10 @@ class GlobalPositionRouter: GlobalPositionWireframeProtocol {
 		// TODO: when detail is different make a switch
 		let productDetail = ProductDetailRouter.createModule(product: product, refreshDelegate: viewController)
 		viewController.navigationController?.pushViewController(productDetail, animated: true)
+	}
+	
+	func goToInfoScreen() {
+		let infoVC = InfoRouter.createModule()
+		viewController?.navigationController?.pushViewController(infoVC, animated: true)
 	}
 }
