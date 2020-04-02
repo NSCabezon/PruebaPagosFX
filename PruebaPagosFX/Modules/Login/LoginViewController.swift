@@ -12,7 +12,17 @@ class LoginViewController: UIViewController, LoginViewProtocol {
 	
 	var presenter: LoginPresenterProtocol?
 	
+	@IBOutlet weak var userLabel: UILabel! {
+		didSet {
+			userLabel.text = localizedString("user_hint")
+		}
+	}
 	@IBOutlet weak var userTextfield: UITextField!
+	@IBOutlet weak var passwordLabel: UILabel! {
+		   didSet {
+			   passwordLabel.text = localizedString("pass_hint")
+		   }
+	   }
 	@IBOutlet weak var passwordTextfield: UITextField!
 	
 	override func viewDidLoad() {

@@ -59,17 +59,51 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7J-Ce-JIs">
+                                <rect key="frame" x="20" y="596" width="335" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q1X-c4-pS0">
+                                        <rect key="frame" x="286" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="localEnvValueChanged:" destination="A71-oR-m7Q" eventType="valueChanged" id="WFi-NA-god"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use local environment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-Bn-zVn">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="q1X-c4-pS0" firstAttribute="top" secondItem="U7J-Ce-JIs" secondAttribute="top" id="HtN-Dm-ecd"/>
+                                    <constraint firstAttribute="bottom" secondItem="q1X-c4-pS0" secondAttribute="bottom" id="If4-lc-fcD"/>
+                                    <constraint firstItem="jS4-Bn-zVn" firstAttribute="leading" secondItem="U7J-Ce-JIs" secondAttribute="leading" id="S59-iv-2jy"/>
+                                    <constraint firstItem="q1X-c4-pS0" firstAttribute="centerY" secondItem="jS4-Bn-zVn" secondAttribute="centerY" id="bxA-Zn-P1D"/>
+                                    <constraint firstAttribute="trailing" secondItem="q1X-c4-pS0" secondAttribute="trailing" id="eSp-8J-Qrh"/>
+                                    <constraint firstItem="q1X-c4-pS0" firstAttribute="leading" secondItem="jS4-Bn-zVn" secondAttribute="trailing" constant="20" id="fPE-hL-K3p"/>
+                                    <constraint firstItem="jS4-Bn-zVn" firstAttribute="top" secondItem="U7J-Ce-JIs" secondAttribute="top" id="sNq-4e-juO"/>
+                                    <constraint firstAttribute="bottom" secondItem="jS4-Bn-zVn" secondAttribute="bottom" id="zfk-eL-Tbv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ECN-iQ-uTS" firstAttribute="bottom" secondItem="U7J-Ce-JIs" secondAttribute="bottom" constant="40" id="1Bf-RQ-V7x"/>
+                            <constraint firstItem="U7J-Ce-JIs" firstAttribute="leading" secondItem="hhD-nP-PDI" secondAttribute="leading" constant="20" id="EBO-3J-tRX"/>
                             <constraint firstItem="WUE-Rd-HRQ" firstAttribute="top" secondItem="ECN-iQ-uTS" secondAttribute="top" constant="80" id="Mnd-my-0u2"/>
                             <constraint firstItem="WUE-Rd-HRQ" firstAttribute="leading" secondItem="hhD-nP-PDI" secondAttribute="leading" constant="16" id="MwY-Vm-mBY"/>
+                            <constraint firstAttribute="trailing" secondItem="U7J-Ce-JIs" secondAttribute="trailing" constant="20" id="PeL-4E-wUq"/>
                             <constraint firstItem="ECN-iQ-uTS" firstAttribute="trailing" secondItem="WUE-Rd-HRQ" secondAttribute="trailing" constant="16" id="fxw-mn-KGS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ECN-iQ-uTS"/>
                     </view>
                     <connections>
+                        <outlet property="localEnvSwitchContentView" destination="U7J-Ce-JIs" id="1BH-io-XIo"/>
+                        <outlet property="passwordLabel" destination="Fgw-4O-HEZ" id="1VV-ZC-06I"/>
                         <outlet property="passwordTextfield" destination="oEk-PR-sHc" id="k3t-tV-eyt"/>
+                        <outlet property="userLabel" destination="Iqk-Z0-5Vw" id="pAE-rz-UfI"/>
                         <outlet property="userTextfield" destination="YK8-JQ-te2" id="LJw-E0-sgC"/>
                     </connections>
                 </viewController>

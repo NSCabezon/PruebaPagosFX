@@ -7,6 +7,8 @@
 */
 
 // Login
+"user_hint" = "User:";
+"pass_hint" = "Password:";
 "user_mandatory" = "User is mandatory, please enter a valid user";
 "password_mandatory" = "Password is mandatory, please enter a valid password";
 "login_failed" = "Login failed, please try again.";
