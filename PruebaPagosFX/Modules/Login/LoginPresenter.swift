@@ -6,6 +6,8 @@ protocol LoginPresenterProtocol: class {
 	func login(with user: String, and password: String)
 	func loginOk()
 	func loginDidFailed()
+	
+	func switchValueChanged(isOn: Bool)
 }
 
 class LoginPresenter: LoginPresenterProtocol {
@@ -31,5 +33,9 @@ class LoginPresenter: LoginPresenterProtocol {
 	
 	func loginDidFailed() {
 		view?.loginDidFailed()
+	}
+	
+	func switchValueChanged(isOn: Bool) {
+		interactor?.changeToLocalEnv(isLocal: isOn)
 	}
 }

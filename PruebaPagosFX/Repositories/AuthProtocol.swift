@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireMockable
 
 typealias LoginResult = Swift.Result<LoginResponse, AFError>
 
@@ -17,6 +18,14 @@ protocol AuthProtocol {
 
 class AuthRepository: BaseRepository, AuthProtocol {
 	let loginPath = "login"
+	
+	init(withEnv environment: Environment) {
+		var mocking: URLProtocol.Type?
+		if environment == .local {
+			mocking = MockingURLProtocol.self
+		}
+		super.init(manager: RequestManager(environment, mockingProtocol: mocking))
+	}
 	
 	func auth(with user: LoginRequest, completion: @escaping (LoginResult) -> Void) {
 		manager.request(loginPath, method: .post, parameters: user, encoding: JSONEncoding.default, headers: nil)

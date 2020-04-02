@@ -10,6 +10,11 @@ import Foundation
 
 struct SessionData {
 	var token: String?
+	var environment: Environment {
+		didSet {
+			safeprint("Environment \(environment.name) selected")
+		}
+	}
 	
-	static var shared = SessionData()
+	static var shared = SessionData(token: nil, environment: Environment.defaultEnv())
 }

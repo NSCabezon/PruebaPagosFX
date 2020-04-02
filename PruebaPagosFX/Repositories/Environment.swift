@@ -30,5 +30,10 @@ enum Environment: EnvironmentInfo {
 			return URL(string: "https://dev-server-demos.herokuapp.com")!
 		}
 	}
+	
+	// TODO: change it to PRO when available 😜
+	static func defaultEnv() -> Environment {
+		return .dev
+	}
 }
 
