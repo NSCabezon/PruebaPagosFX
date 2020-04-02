@@ -5,14 +5,15 @@ import Foundation
 protocol LoginInteractorProtocol: class {
 	var presenter: LoginPresenterProtocol? { get set }
 	func login(with user: String, and password: String)
+	func changeToLocalEnv(isLocal: Bool)
 }
 
 class LoginInteractor: LoginInteractorProtocol {
 	
 	weak var presenter: LoginPresenterProtocol?
-	let authRepository: AuthProtocol
+	var authRepository: AuthProtocol
 	
-	init(authRepository: AuthProtocol = AuthRepository()) {
+	init(authRepository: AuthProtocol) {
 		self.authRepository = authRepository
 	}
 	
@@ -24,9 +25,19 @@ class LoginInteractor: LoginInteractorProtocol {
 				SessionData.shared.token = response.token
 				self.presenter?.loginOk()
 			case .failure(let error):
-				print(error)
+				safeprint(error)
 				self.presenter?.loginDidFailed()
 			}
 		}
+	}
+	
+	func changeToLocalEnv(isLocal: Bool) {
+		var env = Environment.dev
+		if isLocal {
+			env = .local
+		}
+		
+		SessionData.shared.environment = env
+		authRepository = AuthRepository(withEnv: env)
 	}
 }
