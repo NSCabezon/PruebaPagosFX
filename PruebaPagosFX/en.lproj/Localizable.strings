@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  PruebaPagosFX
+
+  Created by Ivan Cabezon on 02/04/2020.
+  Copyright © 2020 Ivan Cabezon. All rights reserved.
+*/
+
+// Login
+"user_mandatory" = "User is mandatory, please enter a valid user";
+"password_mandatory" = "Password is mandatory, please enter a valid password";
+"login_failed" = "Login failed, please try again.";
