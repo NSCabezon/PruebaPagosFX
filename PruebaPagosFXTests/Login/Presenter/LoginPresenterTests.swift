@@ -26,11 +26,33 @@ class LoginPresenterTests: XCTestCase {
 	
 	func testLoginOk() {
 		presenter.loginOk()
-		XCTAssert(viewMock.hideGlobalSpinnerViewCalled)
+		XCTAssert(routerMock.goToGlobalPositionCalled)
 	}
 	
 	func testLoginDidFailed() {
 		presenter.loginDidFailed()
 		XCTAssert(viewMock.loginDidFailedCalled)
+	}
+	
+	func testSwitchValueChangedOn() {
+		presenter.switchValueChanged(isOn: true)
+		XCTAssert(interactorMock.changeToLocalEnvCalled)
+		XCTAssertNotNil(interactorMock.isLocal)
+		if let isLocal = interactorMock.isLocal {
+			XCTAssert(isLocal)
+		} else {
+			XCTAssert(false, "This should not happen")
+		}
+	}
+	
+	func testSwitchValueChangedOff() {
+		presenter.switchValueChanged(isOn: false)
+		XCTAssert(interactorMock.changeToLocalEnvCalled)
+		XCTAssertNotNil(interactorMock.isLocal)
+		if let isLocal = interactorMock.isLocal {
+			XCTAssertFalse(isLocal)
+		} else {
+			XCTAssert(false, "This should not happen")
+		}
 	}
 }

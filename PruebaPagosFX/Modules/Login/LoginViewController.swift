@@ -2,13 +2,13 @@ import UIKit
 
 // MARK: - View
 
-protocol LoginViewProtocol: View {
+protocol LoginViewProtocol: class {
 	var presenter: LoginPresenterProtocol? { get set }
 	
 	func loginDidFailed()
 }
 
-class LoginViewController: UIViewController, LoginViewProtocol {
+class LoginViewController: UIViewController, LoginViewProtocol, View {
 	
 	var presenter: LoginPresenterProtocol?
 	

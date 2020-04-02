@@ -23,13 +23,14 @@ class GlobalPositionViewController: UIViewController, GlobalPositionViewProtocol
 	}
 	
 	func configureUI() {
-		title = localizedString("global_position")
 		tableView.registerNib(GPCellTableViewCell.self)
 	}
 	
 	func didGetGP(globalPosition: GlobalPosition) {
 		self.globalPosition = globalPosition
+		title = localizedString("hi_user", args: globalPosition.name)
 		tableView.reloadData()
+		hideGlobalSpinnerView()
 	}
 	
 	func didFailToGetGP() {

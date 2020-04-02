@@ -2,7 +2,7 @@ import UIKit
 
 @testable import PruebaPagosFX
 
-class LoginViewControllerMock:  LoginViewProtocol {
+class LoginViewControllerMock: LoginViewProtocol {
 	var presenter: LoginPresenterProtocol?
 	var hideGlobalSpinnerViewCalled = false
 	var loginDidFailedCalled = false

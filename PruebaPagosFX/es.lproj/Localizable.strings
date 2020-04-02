@@ -16,7 +16,7 @@
 "login_failed" = "Login incorrecto, verifica los campos e intentalo de nuevo.";
 
 // Global position
-"global_position" = "Global position";
+"hi_user" = "Hi %@";
 "account_section_title" = "Cuentas";
 "card_section_title" = "Tarjetas";
 "account_title" = "Cuentas";

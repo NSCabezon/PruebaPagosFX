@@ -16,7 +16,7 @@
 "login_failed" = "Login failed, please try again.";
 
 // Global position
-"global_position" = "Global position";
+"hi_user" = "Hi %@";
 "account_section_title" = "Accounts";
 "card_section_title" = "Cards";
 "account_title" = "Accounts";

@@ -27,7 +27,6 @@ class LoginPresenter: LoginPresenterProtocol {
 	}
 	
 	func loginOk() {
-		view?.hideGlobalSpinnerView()
 		router.goToGlobalPosition()
 	}
 	
