@@ -26,9 +26,6 @@
 		643691F524364C4E000D9BCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643691F424364C4E000D9BCF /* AppDelegate.swift */; };
 		643691FE24364C50000D9BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643691FD24364C50000D9BCF /* Assets.xcassets */; };
 		6436920124364C50000D9BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643691FF24364C50000D9BCF /* LaunchScreen.storyboard */; };
-		6436921A24364E45000D9BCF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6436921924364E45000D9BCF /* IQKeyboardManagerSwift */; };
-		6436921D24364E68000D9BCF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6436921C24364E68000D9BCF /* Alamofire */; };
-		6436922024364E96000D9BCF /* AlamofireMockable in Frameworks */ = {isa = PBXBuildFile; productRef = 6436921F24364E96000D9BCF /* AlamofireMockable */; };
 		6436922624364EB0000D9BCF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6436922124364EB0000D9BCF /* Login.storyboard */; };
 		6436922724364EB0000D9BCF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436922224364EB0000D9BCF /* LoginPresenter.swift */; };
 		6436922824364EB0000D9BCF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436922324364EB0000D9BCF /* LoginRouter.swift */; };
@@ -61,7 +58,6 @@
 		647808DA243650E7004C92B8 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647808D9243650E7004C92B8 /* Environment.swift */; };
 		647808DD24365425004C92B8 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647808DC24365425004C92B8 /* SessionData.swift */; };
 		647808DF2436559D004C92B8 /* Mocks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 647808DE2436559D004C92B8 /* Mocks.bundle */; };
-		647808E22436577D004C92B8 /* KRProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 647808E12436577D004C92B8 /* KRProgressHUD */; };
 		647808E624365862004C92B8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647808E524365862004C92B8 /* View.swift */; };
 		647808E824365882004C92B8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647808E724365882004C92B8 /* Utils.swift */; };
 		647808EB243658B4004C92B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 647808ED243658B4004C92B8 /* Localizable.strings */; };
@@ -73,6 +69,9 @@
 		647808FD24365CC4004C92B8 /* AuthMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647808FC24365CC4004C92B8 /* AuthMockRepository.swift */; };
 		6478090224365EE5004C92B8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6478090124365EE5004C92B8 /* APIError.swift */; };
 		6478090424365F8D004C92B8 /* LoginPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6478090324365F8D004C92B8 /* LoginPresenterMock.swift */; };
+		64C5B2BC2438B30700667EB8 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64C5B2BB2438B30700667EB8 /* IQKeyboardManagerSwift */; };
+		64C5B2BF2438B34000667EB8 /* KRProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 64C5B2BE2438B34000667EB8 /* KRProgressHUD */; };
+		64C5B2C22438B36700667EB8 /* AlamofireMockable in Frameworks */ = {isa = PBXBuildFile; productRef = 64C5B2C12438B36700667EB8 /* AlamofireMockable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,10 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647808E22436577D004C92B8 /* KRProgressHUD in Frameworks */,
-				6436922024364E96000D9BCF /* AlamofireMockable in Frameworks */,
-				6436921A24364E45000D9BCF /* IQKeyboardManagerSwift in Frameworks */,
-				6436921D24364E68000D9BCF /* Alamofire in Frameworks */,
+				64C5B2C22438B36700667EB8 /* AlamofireMockable in Frameworks */,
+				64C5B2BF2438B34000667EB8 /* KRProgressHUD in Frameworks */,
+				64C5B2BC2438B30700667EB8 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,10 +451,9 @@
 			);
 			name = PruebaPagosFX;
 			packageProductDependencies = (
-				6436921924364E45000D9BCF /* IQKeyboardManagerSwift */,
-				6436921C24364E68000D9BCF /* Alamofire */,
-				6436921F24364E96000D9BCF /* AlamofireMockable */,
-				647808E12436577D004C92B8 /* KRProgressHUD */,
+				64C5B2BB2438B30700667EB8 /* IQKeyboardManagerSwift */,
+				64C5B2BE2438B34000667EB8 /* KRProgressHUD */,
+				64C5B2C12438B36700667EB8 /* AlamofireMockable */,
 			);
 			productName = PruebaPagosFX;
 			productReference = 643691F124364C4E000D9BCF /* PruebaPagosFX.app */;
@@ -510,10 +507,9 @@
 			);
 			mainGroup = 643691E824364C4E000D9BCF;
 			packageReferences = (
-				6436921824364E45000D9BCF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				6436921B24364E68000D9BCF /* XCRemoteSwiftPackageReference "Alamofire" */,
-				6436921E24364E96000D9BCF /* XCRemoteSwiftPackageReference "AlamofireMockable" */,
-				647808E02436577C004C92B8 /* XCRemoteSwiftPackageReference "KRProgressHUD" */,
+				64C5B2BA2438B30700667EB8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				64C5B2BD2438B34000667EB8 /* XCRemoteSwiftPackageReference "KRProgressHUD" */,
+				64C5B2C02438B36700667EB8 /* XCRemoteSwiftPackageReference "AlamofireMockable" */,
 			);
 			productRefGroup = 643691F224364C4E000D9BCF /* Products */;
 			projectDirPath = "";
@@ -900,60 +896,47 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6436921824364E45000D9BCF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		64C5B2BA2438B30700667EB8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:hackiftekhar/IQKeyboardManager.git";
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.5.5;
 			};
 		};
-		6436921B24364E68000D9BCF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		64C5B2BD2438B34000667EB8 /* XCRemoteSwiftPackageReference "KRProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.5;
-			};
-		};
-		6436921E24364E96000D9BCF /* XCRemoteSwiftPackageReference "AlamofireMockable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:NSCabezon/AlamofireMockable.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		647808E02436577C004C92B8 /* XCRemoteSwiftPackageReference "KRProgressHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:krimpedance/KRProgressHUD.git";
+			repositoryURL = "https://github.com/krimpedance/KRProgressHUD.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.4.5;
 			};
 		};
+		64C5B2C02438B36700667EB8 /* XCRemoteSwiftPackageReference "AlamofireMockable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NSCabezon/AlamofireMockable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6436921924364E45000D9BCF /* IQKeyboardManagerSwift */ = {
+		64C5B2BB2438B30700667EB8 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6436921824364E45000D9BCF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 64C5B2BA2438B30700667EB8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-		6436921C24364E68000D9BCF /* Alamofire */ = {
+		64C5B2BE2438B34000667EB8 /* KRProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6436921B24364E68000D9BCF /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		6436921F24364E96000D9BCF /* AlamofireMockable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6436921E24364E96000D9BCF /* XCRemoteSwiftPackageReference "AlamofireMockable" */;
-			productName = AlamofireMockable;
-		};
-		647808E12436577D004C92B8 /* KRProgressHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 647808E02436577C004C92B8 /* XCRemoteSwiftPackageReference "KRProgressHUD" */;
+			package = 64C5B2BD2438B34000667EB8 /* XCRemoteSwiftPackageReference "KRProgressHUD" */;
 			productName = KRProgressHUD;
+		};
+		64C5B2C12438B36700667EB8 /* AlamofireMockable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64C5B2C02438B36700667EB8 /* XCRemoteSwiftPackageReference "AlamofireMockable" */;
+			productName = AlamofireMockable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
